@@ -1,0 +1,35 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// export default defineConfig({
+//   plugins: [react()],
+//   server: {
+//     port: 3000,
+//     proxy: {
+//       '/api': {
+//         target: 'http://localhost:6000',
+//         changeOrigin: true
+//       },
+//       '/uploads': {
+//         target: 'http://localhost:6000',
+//         changeOrigin: true
+//       }
+//     }
+//   }
+// })
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'https://jckc-app-backend.onrender.com',
+        changeOrigin: true
+      },
+      '/uploads': {
+        target: 'https://jckc-app-backend.onrender.com',
+        changeOrigin: true
+      }
+    }
+  }
+})
