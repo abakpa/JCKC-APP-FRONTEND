@@ -7,6 +7,10 @@ import Navbar from './components/common/Navbar';
 import PrivateRoute from './components/common/PrivateRoute';
 import Loading from './components/common/Loading';
 
+// PWA Components
+import InstallPrompt from './components/pwa/InstallPrompt';
+import UpdatePrompt from './components/pwa/UpdatePrompt';
+
 // Auth Pages
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
@@ -245,6 +249,9 @@ const App = () => {
             },
           }}
         />
+        {/* PWA Components */}
+        <InstallPrompt />
+        <UpdatePrompt />
       </AuthProvider>
     </Router>
   );
