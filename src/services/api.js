@@ -58,6 +58,9 @@ export const childrenAPI = {
   }),
   getByClass: (classId) => api.get(`/children/class/${classId}`),
   getByGroup: (groupId) => api.get(`/children/group/${groupId}`),
+  transferClass: (id, newClassId) => api.put(`/children/${id}/transfer-class`, { newClassId }),
+  joinGroup: (id, groupId) => api.put(`/children/${id}/join-group`, { groupId }),
+  leaveGroup: (id, groupId) => api.put(`/children/${id}/leave-group`, { groupId }),
 };
 
 // Classes API
